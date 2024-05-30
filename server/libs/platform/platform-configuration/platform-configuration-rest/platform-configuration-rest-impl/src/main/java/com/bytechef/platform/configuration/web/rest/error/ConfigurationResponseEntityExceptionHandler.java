@@ -17,7 +17,7 @@
 package com.bytechef.platform.configuration.web.rest.error;
 
 import com.bytechef.platform.configuration.exception.ConfigurationException;
-import com.bytechef.platform.web.rest.error.constant.AbstractResponseEntityExceptionHandler;
+import com.bytechef.platform.web.rest.error.AbstractResponseEntityExceptionHandler;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

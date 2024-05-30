@@ -17,15 +17,53 @@
 package com.bytechef.platform.user.service;
 
 import com.bytechef.platform.user.domain.User;
+import com.bytechef.platform.user.dto.AdminUserDTO;
+import com.bytechef.platform.user.dto.UserDTO;
+import java.util.List;
 import java.util.Optional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 /**
  * @author Ivica Cardic
  */
 public interface UserService {
 
+    Optional<User> activateRegistration(String key);
+
+    void changePassword(String currentClearTextPassword, String newPassword);
+
+    Optional<User> completePasswordReset(String newPassword, String key);
+
+    User createUser(AdminUserDTO userDTO);
+
+    void deleteUser(String login);
+
+    Optional<User> fetchUserByEmail(String email);
+
     Optional<User> fetchUserByLogin(String login);
+
+    Page<AdminUserDTO> getAllManagedUsers(Pageable pageable);
+
+    Page<UserDTO> getAllPublicUsers(Pageable pageable);
+
+    List<String> getAuthorities();
 
     User getUser(long id);
 
+    Optional<User> getUserWithAuthorities();
+
+    Optional<User> getUserWithAuthoritiesByLogin(String login);
+
+    User registerUser(AdminUserDTO userDTO, String password);
+
+    void removeNotActivatedUsers();
+
+    void removeOldPersistentTokens();
+
+    Optional<User> requestPasswordReset(String mail);
+
+    Optional<AdminUserDTO> updateUser(AdminUserDTO userDTO);
+
+    void updateUser(String firstName, String lastName, String email, String langKey, String imageUrl);
 }

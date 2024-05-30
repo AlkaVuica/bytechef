@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package com.bytechef.platform.web.rest.error.constant;
+package com.bytechef.platform.web.rest.error;
 
+import com.bytechef.platform.web.rest.error.constant.ErrorConstants;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;

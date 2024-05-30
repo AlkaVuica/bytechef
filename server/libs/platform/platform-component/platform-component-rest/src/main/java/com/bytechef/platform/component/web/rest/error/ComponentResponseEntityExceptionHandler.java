@@ -17,7 +17,7 @@
 package com.bytechef.platform.component.web.rest.error;
 
 import com.bytechef.platform.component.exception.ComponentExecutionException;
-import com.bytechef.platform.web.rest.error.constant.AbstractResponseEntityExceptionHandler;
+import com.bytechef.platform.web.rest.error.AbstractResponseEntityExceptionHandler;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.util.Map;
 import org.springframework.core.Ordered;
